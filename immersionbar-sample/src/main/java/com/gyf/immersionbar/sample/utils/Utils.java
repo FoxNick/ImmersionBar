@@ -8,6 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.Window;
 
 import com.gyf.immersionbar.sample.R;
+import java.security.SecureRandom;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,7 +37,7 @@ public class Utils {
 
 
     public static String getPic() {
-        Random random = new Random();
+        Random random = new SecureRandom();
         return "http://106.14.135.179/ImmersionBar/" + random.nextInt(40) + ".jpg";
     }
 
@@ -46,7 +47,7 @@ public class Utils {
 
     public static ArrayList<String> getPics(int num) {
         ArrayList<String> pics = new ArrayList<>();
-        Random random = new Random();
+        Random random = new SecureRandom();
 
         do {
             String s = "http://106.14.135.179/ImmersionBar/" + random.nextInt(40) + ".jpg";
@@ -58,12 +59,12 @@ public class Utils {
     }
 
     public static String getFullPic() {
-        Random random = new Random();
+        Random random = new SecureRandom();
         return "http://106.14.135.179/ImmersionBar/phone/" + random.nextInt(40) + ".jpeg";
     }
 
     public static int getFlowerIcon() {
-        Random random = new Random();
+        Random random = new SecureRandom();
         int i = random.nextInt(99);
         if (i < 33) {
             return R.mipmap.icon_flower_1;
